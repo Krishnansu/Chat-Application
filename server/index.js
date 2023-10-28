@@ -12,12 +12,12 @@ const server = http.createServer(app);
 // const io = socketio(server);
 const io = socketio(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://lets-chat-room.netlify.app/",
     methods: ["GET", "POST"]
   },
   transports: ['websocket', 'polling', 'flashsocket']
 });
-server.listen(5000, () =>  console.log(`Server has started.`));
+server.listen(process.env.PORT || 5000, () =>  console.log(`Server has started.`));
 
 
 // server.listen(5000, () => console.log(`Server has started.`));
