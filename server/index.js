@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // const io = socketio(server);
 const io = socketio(server, {
   cors: {
-    origin: "https://lets-chat-room.netlify.app/",
+    origin: "https://lets-chat-room.netlify.app",
     methods: ["GET", "POST"]
   },
   transports: ['websocket', 'polling', 'flashsocket']
